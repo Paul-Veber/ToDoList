@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>To Do List</title>
+    <link rel="stylesheet" href="toDoList.css" />
+  </head>
+  <body>
+    <header>
+      <h1>To Do List</h1>
+    </header>
+    <div id="main">
+      <h2>créer une tache</h2>
+      <div id="newTaskCreator">
+        <div id="creatorContainer">
+          <label for="newTaskName"
+            >nom
+            <input type="text" id="newTaskName" />
+          </label>
+          <label for="newTaskStatut"
+            >Statut
+            <select name="newTaskStatut" id="newTaskStatut">
+              <option value="default">À déterminer</option>
+              <option value="realise">Réalisée</option>
+              <option value="toDo">À faire</option>
+            </select>
+            <button id="addTask">Ajouter la tache</button>
+            <div id="error"></div>
+          </label>
+        </div>
+      </div>
+      <div id="toDoListContainer">
+        <h2>To Do Liste</h2>
+        <div id="toDoList">
+          <span id="noTask">Aucune Tache</span>
+        </div>
+      </div>
+    </div>
+
+    <script src="toDoList.js"></script>
+  </body>
+</html>
