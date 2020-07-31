@@ -1,4 +1,4 @@
-import * as constructor from './taskConstructor.js';
+import * as constructor from "./taskConstructor.js";
 
 // charge task saved on local storage
 
@@ -17,15 +17,15 @@ if (savedTasks) {
 }
 
 // events when adding new task
-const btnAddTask = document.getElementById("addTask");
+const btnAddTask = document.querySelector("#addTask");
 btnAddTask.addEventListener("click", (e) => {
   // increment and save number of tasks created
   tasknumber++;
   localStorage.setItem("tasknumber", tasknumber);
 
   const taskID = "task" + tasknumber;
-  const taskName = document.getElementById("newTaskName").value;
-  const taskSatut = document.getElementById("newTaskStatut").value;
+  const taskName = document.querySelector("#newTaskName").value;
+  const taskSatut = document.querySelector("#newTaskStatut").value;
 
   // save task
   taskList.push(taskID);
@@ -42,7 +42,9 @@ btnAddTask.addEventListener("click", (e) => {
       constructor.errorMessage("la tache n'a pas de nom");
     }
   } else {
-    constructor.errorMessage('Choisissez si la tâche est "à realiser" ou "réaliser"');
+    constructor.errorMessage(
+      'Choisissez si la tâche est "à realiser" ou "réaliser"'
+    );
   }
   constructor.noTask();
 });

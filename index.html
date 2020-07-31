@@ -12,22 +12,31 @@
     <div id="main">
       <h2>créer une tache</h2>
       <div id="newTaskCreator">
-        <div id="creatorContainer">
-          <label for="newTaskName"
+        <form>
+          <label for="inputTaskName"
             >nom
-            <input type="text" id="newTaskName" />
+            <input type="text" id="inputTaskName" />
           </label>
-          <label for="newTaskStatut"
+          <label for="inputTaskStatut"
             >Statut
-            <select name="newTaskStatut" id="newTaskStatut">
+            <select name="newTaskStatut" id="inputTaskStatut">
               <option value="default">À déterminer</option>
               <option value="realise">Réalisée</option>
               <option value="toDo">À faire</option>
             </select>
-            <button id="addTask">Ajouter la tache</button>
-            <div id="error"></div>
           </label>
-        </div>
+          <div id="description">
+            <H4>description</H4>
+            <textarea
+              name="description"
+              id="inputTaskDescription"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </div>
+          <button type="submit" id="addTask">Ajouter la tache</button>
+        </form>
+        <div id="error"></div>
       </div>
       <div id="toDoListContainer">
         <h2>To Do Liste</h2>
@@ -41,6 +50,6 @@
     </div>
     <script src="globalVariable.js"></script>
     <script src="toDoList.js" type="module"></script>
-    <script src="button.js" ></script>
+    <script src="button.js"></script>
   </body>
 </html>
